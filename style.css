@@ -1,0 +1,256 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: #e0e7ff;
+    background: linear-gradient(135deg, rgba(108, 99, 255, 0.2), rgba(255, 101, 132, 0.2));
+    backdrop-filter: blur(10px);
+    color: #343a40;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+.container {
+    flex: 1;
+    width: 100%;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    color: #6c63ff;
+    margin-bottom: 0.5rem;
+    font-size: 2.5rem;
+}
+
+.current-date {
+    color: #6c757d;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.task-input {
+    display: flex;
+    margin-bottom: 2rem;
+    gap: 10px;
+
+}
+
+.task-input input {
+    flex: 1;
+    padding: 12px 15px;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.task-input button {
+    padding: 12px 20px;
+    background-color: #6c63ff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.tabs {
+    display: flex;
+    margin-bottom: 1.5rem;
+    gap: 10px;
+}
+
+.tab {
+    flex: 1;
+    padding: 10px;
+    background-color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tab.active {
+    background-color: #6c63ff;
+    color: white;
+}
+
+.task-list-container {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    min-height: 150px;
+}
+
+.task-list {
+    list-style: none;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.task-checkbox {
+    margin-right: 15px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.task-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.task-text {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.task-text.completed {
+    text-decoration: line-through;
+    color: #6c757d;
+}
+
+.task-date {
+    font-size: 0.8rem;
+    color: #6c757d;
+}
+
+.task-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.task-actions button {
+    display: inline-flex;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    padding: 5px;
+    width: 32px;
+    height: 32px;
+}
+
+.edit-task {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-size: 1.1rem;
+    font-family: inherit;
+    outline: none;
+    border: 2px solid #6c63ff;
+    border-radius: 5px;
+    /* background-color: transparent;  */
+}
+
+.edit-btn {
+    color: #ffc107;
+}
+
+.delete-btn {
+    color: #dc3545;
+}
+
+.empty-message {
+    text-align: center;
+    color: #6c757d;
+    padding: 20px 0;
+    font-size: 1rem;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .task-input {
+        flex-direction: column;
+    }
+
+    .task-input button {
+        width: 100%;
+    }
+
+    .tabs {
+        flex-direction: column;
+    }
+
+    .tab {
+        flex: 1 1 100%;
+    }
+
+    .task-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .task-actions {
+        margin-left: 0;
+    }
+
+    .task-content {
+        margin-bottom: 5px;
+    }
+}
+
+.hidden {
+    display: none !important;
+}
+
+footer {
+    margin-top: auto;
+    background: #6c63ff;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer-container p {
+    margin: 5px 0;
+    font-size: 0.95rem;
+}
+
+.footer-container a {
+    color: #ffd700;
+    text-decoration: none;
+    font-weight: 600;
+    margin: 0 5px;
+}
+
+.footer-container a:hover {
+    text-decoration: underline;
+}
+
+.copy {
+    font-size: 0.8rem;
+    color: #e0e0e0;
+    margin-top: 10px;
+}

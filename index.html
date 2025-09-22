@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Todo List</h1>
+            <div class="current-date" id="currentDate"></div>
+        </header>
+
+        <div class="task-input">
+            <input type="text" id="newTaskInput" placeholder="Add a new task...">
+            <button id="addTaskBtn">+ Add</button>
+        </div>
+
+        <div class="tabs">
+            <button class="tab active" data-tab="all">All Tasks</button>
+            <button class="tab" data-tab="pending">Pending</button>
+            <button class="tab" data-tab="completed">Completed</button>
+        </div>
+        
+        <div class="task-list-container">
+            <h3 id="activeTabTitle">All Tasks</h3>
+            <ul class="task-list" id="taskList"></ul>
+            <p class="empty-message" id="emptyMessage">No any Task</p>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <p>📧 Contact: <a href="mailto:l.rohit.hazra@gmail.com">l.rohit.hazra@gmail.com</a></p>
+            <div class="social-links">
+                <a href="https://github.com/rohit-hazra" target="_blank">GitHub</a> |
+                <a href="https://www.linkedin.com/in/rohit-hazra-3b9615317" target="_blank">LinkedIn</a>
+                <!-- <a href="#" target="_blank">Instagram</a> -->
+            </div>
+            <p>Made with ❤️ by Rohit!</p>
+            <p class="copy">&copy; 2025 All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
