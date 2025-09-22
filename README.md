@@ -18,3 +18,5 @@ This project allows users to **add, edit, delete, and mark tasks as completed**,
 - CSS3  
 - JavaScript  
 
+## 🌐 Live Demo
+Check out the live Todo List here: [Live Demo](https://rohit-hazra.github.io/Todo-List/) ❤️
