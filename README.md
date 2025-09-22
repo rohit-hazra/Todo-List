@@ -13,7 +13,8 @@ This project allows users to **add, edit, delete, and mark tasks as completed**,
 - 📱 Fully **responsive design** for mobile and desktop  
 - 🎨 Modern **UI with gradient background and smooth styling**  
 
-##🛠️ Built With
--HTML5 – Structure of the app
--CSS3 – Styling with gradient background & responsive design
--JavaScript (Vanilla JS) – Core logic for task management
+## 🛠️ Built With
+- HTML5
+- CSS3  
+- JavaScript  
+
