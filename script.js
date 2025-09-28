@@ -7,6 +7,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const activeTabTitle = document.getElementById('activeTabTitle');
     const currentDateElement = document.getElementById('currentDate');
 
+    let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+
+    function updateLocalStorage() {
+        localStorage.setItem('tasks', JSON.stringify(tasks));
+    }
+
     function updateCurrentDateTime() {
         const now = new Date();
         const options = { 
@@ -29,8 +35,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     setInterval(updateCurrentDateTime, 1000);
     updateCurrentDateTime();
-
-    let tasks = [];
 
     function renderTasks(filter = 'all') {
         taskList.innerHTML = '';
@@ -76,16 +80,19 @@ document.addEventListener('DOMContentLoaded', () => {
             createdAt: new Date()
         });
         newTaskInput.value = '';
+        updateLocalStorage();
         renderTasks(document.querySelector('.tab.active').dataset.tab);
     }
 
     function deleteTask(id) {
         tasks = tasks.filter(t => t.id !== id);
+        updateLocalStorage();
         renderTasks(document.querySelector('.tab.active').dataset.tab);
     }
 
     function toggleTask(id) {
         tasks = tasks.map(t => t.id === id ? { ...t, completed: !t.completed } : t);
+        updateLocalStorage();
         renderTasks(document.querySelector('.tab.active').dataset.tab);
     }
 
@@ -104,6 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         input.addEventListener('blur', () => {
             task.text = input.value.trim() || task.text;
+            updateLocalStorage();
             renderTasks(document.querySelector('.tab.active').dataset.tab);
         });
 
